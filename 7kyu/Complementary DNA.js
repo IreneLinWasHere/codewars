@@ -14,11 +14,17 @@
 // "GTAT" --> "CATA"
 
 // Solution
-let dna = 'GTAT'
+function DNAStrand(dna) {
+    const basePairs = {
+        'G' : 'C',
+        'C' : 'G',
+        'T' : 'A',
+        'A' : 'T'
+    }
 
-function DNAStrand(dna){
-    let dnaList = dna.split('')
-    swit ch 
+    return dna
+        .toUpperCase()
+        .split('')
+        .map(x => basePairs[x])
+        .join('')
 }
-
-console.log(DNAStrand(dna))
