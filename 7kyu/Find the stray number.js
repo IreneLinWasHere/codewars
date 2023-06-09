@@ -23,7 +23,7 @@ function stray(numbers) {
     }
 }
 
-//Refactored, but only works for odd-lendth arrays
+//Refactored, but only works for odd-length arrays
 //const stray = nums => nums.reduce((a, b) => a ^ b);
 
 console.log(stray(numbers))
