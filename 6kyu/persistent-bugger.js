@@ -19,5 +19,4 @@ function persistence(num) {
     return times
 }
 
-
- console.log(persistence(999))
+console.log(persistence(999))
