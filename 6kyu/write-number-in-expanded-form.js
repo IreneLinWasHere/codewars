@@ -10,14 +10,13 @@
 let num = 70304
 
 function expandedForm(num) {
-    let numArr = num.toString().split('')
-    let expanded = []
-    for (let i = 0; i < numArr.length; i++) {
-        if (numArr[i] !== '0') {
-            expanded.push(numArr[i] + '0'.repeat(numArr.length - 1 - i))
-        }
-    }
-    return expanded.join(' + ')
+    return num.toString()
+        .split('')
+        .reverse()
+        .map((a, i) => a * Math.pow(10, i))
+        .filter(a => a > 0)
+        .reverse()
+        .join(' + ')
 }
 
 console.log(expandedForm(num))
