@@ -15,7 +15,9 @@ let str = "The quick brown fox jumps over the lazy dog."
 //another solution
 function isPangram(str){
     str = str.toLowerCase()
-    return 'abcdefghijklmnopqrstuvwxyz'.split('').every(x => str.includes(x))
+    return 'abcdefghijklmnopqrstuvwxyz'
+        .split('')
+        .every(x => str.includes(x))
 }
 
 console.log(isPangram(str))
