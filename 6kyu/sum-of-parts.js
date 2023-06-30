@@ -24,12 +24,6 @@
 // Solution
 let ls = [1, 2, 3, 4, 5, 6]
 
-// function partsSums(ls) {
-//     let result =  ls.map((a, i) => ls.slice(i).reduce((a, b) => a + b, 0))
-//     result.push(0)
-//     return result
-// }
-
 function partsSums(ls) {
     ls.unshift(0)
     let sum = ls.reduce((a, b) => a + b, 0)
