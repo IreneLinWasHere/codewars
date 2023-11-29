@@ -13,7 +13,7 @@
 
 
 function sumMul(n, m) {
-    if (n >= m) {
+    if (n >= m || n < 1) {
         return 'INVALID'
     } else {
         let sum = 0
