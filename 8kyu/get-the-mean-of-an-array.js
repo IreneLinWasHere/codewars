@@ -4,10 +4,10 @@
 
 // The array will never be empty.
 
-let marks = [1,2,3,4,5,]
+let marks = [1, 2, 3, 4, 5,]
 
-function getAverage(marks){
+function getAverage(marks) {
     return Math.floor(marks.reduce((a, c) => a + c, 0) / marks.length)
-  }
+}
 
-  console.log(getAverage(marks))
+console.log(getAverage(marks))
