@@ -12,17 +12,11 @@
 let a1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"]
 let a2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]
 
-const maxStrLen = arr => Math.max(...arr.map(e => e.length))
-const minStrLen = arr => Math.min(...arr.map(e => e.length))
-
 function mxdiflg(a1, a2) {
-    let a1Max = maxStrLen(a1)
-    let a2Max = maxStrLen(a2)
-
-    let a1Min = minStrLen(a1)
-    let a2Min = minStrLen(a1)
-
-    return Math.max(Math.abs(a1Max - a2Min), Math.abs(a2Max - a1Min))
+    if (a1.length === 0 || a2.length === 0) return -1
+    let l1 = a1.map(str => str.length)
+    let l2 = a2.map(str => str.length)
+    return Math.max(Math.max(...l1) - Math.min(...l2), Math.max(...l2) - Math.min(...l1))
 }
 
 console.log(mxdiflg(a1, a2))
