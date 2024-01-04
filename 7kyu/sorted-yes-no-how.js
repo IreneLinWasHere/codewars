@@ -7,9 +7,9 @@
 
 let array = [15, 7, 3, -8]
 function isSortedAndHow(array) {
-    if (array.join('') === array.toSorted((a, b) => a- b).join('')) {
+    if (array.join('') === [...array].sort((a, b) => a- b).join('')) {
         return "yes, ascending"
-    } else if (array.join('') === array.toSorted((a, b) => b - a).join('')) {
+    } else if (array.join('') === [...array].sort((a, b) => b - a).join('')) {
         return "yes, descending"
     } else {
         return 'no'
