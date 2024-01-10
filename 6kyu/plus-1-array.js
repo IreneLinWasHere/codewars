@@ -18,24 +18,18 @@
 
 // [1, 2, 33] is invalid because 33 is not a single-digit integer
 
-let arr = [1,0]
+let arr = [0, 0, 1, 0]
 
 function upArray(arr) {
-    let singleDigits = arr.filter(num => num < 10 && num > -1).length //rule out numbers 10 and above, and negative numbers
-    if (singleDigits !== arr.length || arr.length === 0) {
+    if (arr.some(num => num < 0 || num > 9) || arr.length === 0) {
         return null
     }
-    else {
-        let oneAdded = BigInt(arr.join('')) + BigInt(1)
-        let result = oneAdded.toString().split('').map(digit => +digit)
-        if (arr[0] == 0 && arr[1] > 0) {
-            result.unshift(0)
-        }
-        if (arr[0] == 0 && arr[1] == 0) {
-            result.unshift(0, 0)
-        }
-        return result
-    }
+
+    let oneAdded = BigInt(arr.join('')) + BigInt(1) //handle big numbers
+    return oneAdded.toString()
+        .padStart(arr.length, '0') //adds the appropriate number of 0s at the beginning
+        .split('')
+        .map(digit => +digit)
 }
 
 console.log(upArray(arr))
