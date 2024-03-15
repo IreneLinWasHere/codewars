@@ -15,15 +15,9 @@
 
 const zero = fn => fn ? fn(0) : 0
 const one = fn => fn ? fn(1) : 1
+const two = fn => fn ? fn(2) : 2
+const three = fn => fn ? fn(3) : 3
 
-
-
-function two(operation) {
-    return operation ? operation(2) : 2;
-}
-function three(operation) {
-    return operation ? operation(3) : 3;
-}
 function four(operation) {
     return operation ? operation(4) : 4;
 }
