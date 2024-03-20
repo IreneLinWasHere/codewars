@@ -20,16 +20,9 @@ const three = fn => fn ? fn(3) : 3
 const four = fn => fn ? fn(4) : 4
 const five = fn => fn ? fn(5) : 5
 const six = fn => fn ? fn(6) : 6
+const seven = fn => fn ? fn(7) : 7
 
-function four(operation) {
-    return operation ? operation(4) : 4;
-}
-function five(operation) {
-    return operation ? operation(5) : 5;
-}
-function six(operation) {
-    return operation ? operation(6) : 6;
-}
+
 function seven(operation) {
     return operation ? operation(7) : 7;
 }
