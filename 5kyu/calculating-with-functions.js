@@ -22,11 +22,8 @@ const five = fn => fn ? fn(5) : 5
 const six = fn => fn ? fn(6) : 6
 const seven = fn => fn ? fn(7) : 7
 const eight = fn => fn ? fn(8) : 8
+const nine = fn => fn ? fn(9) : 9
 
-
-function nine(operation) {
-    return operation ? operation(9) : 9;
-}
 
 function plus(x) {
     return function (y) {
