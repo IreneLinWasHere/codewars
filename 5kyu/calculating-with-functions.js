@@ -25,17 +25,9 @@ const eight = fn => fn ? fn(8) : 8
 const nine = fn => fn ? fn(9) : 9
 
 
-function plus(x) {
-    return function (y) {
-        return x + y
-    }
+const plus = x => y => x + y
+const minus = x => y => x - y
 
-}
-function minus(x) {
-    return function (y) {
-        return x - y
-    }
-}
 function times(x) {
     return function (y) {
         return x * y
