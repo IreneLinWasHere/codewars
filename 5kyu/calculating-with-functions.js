@@ -27,12 +27,9 @@ const nine = fn => fn ? fn(9) : 9
 
 const plus = x => y => x + y
 const minus = x => y => x - y
+const times = x => y => x * y
 
-function times(x) {
-    return function (y) {
-        return x * y
-    }
-}
+
 function dividedBy(x) {
     return function (y) {
         return Math.floor(y / x)
