@@ -9,7 +9,7 @@
 // scramble('cedewaraaossoqqyt', 'codewars') ==> True
 // scramble('katas', 'steak') ==> False
 
-let str1 = 'katas'
+let str1 = 'kataslkjoi'
 let str2 = 'steak'
 
 function scramble(str1, str2) { 
